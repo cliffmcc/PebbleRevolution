@@ -5,6 +5,7 @@
 [Video of time animation](http://d.pr/v/nQWY)
 
 Implemented by Douwe Maan.
+
 BlueTooth additions by Cliff McCollum.
 
 Envisioned as a watchface by Jean-Noël Mattern (Jnm), who posted it in the ["Watch-face ideas" thread](http://forums.getpebble.com/discussion/comment/3538/#Comment_3538) on the Pebble forums.
@@ -22,7 +23,8 @@ Based on the display of the [Freebox Revolution](http://www.free.fr/adsl/freebox
 
 ## License
 Original code Copyright (c) 2013 [Douwe Maan](http://www.douwemaan.com/)
-BlueTooth additions Copyright (c) 2014 [Cliff McCollum]
+
+BlueTooth additions Copyright (c) 2014 Cliff McCollum
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
