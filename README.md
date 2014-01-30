@@ -5,6 +5,7 @@
 [Video of time animation](http://d.pr/v/nQWY)
 
 Implemented by Douwe Maan.
+BlueTooth additions by Cliff McCollum.
 
 Envisioned as a watchface by Jean-Noël Mattern (Jnm), who posted it in the ["Watch-face ideas" thread](http://forums.getpebble.com/discussion/comment/3538/#Comment_3538) on the Pebble forums.
 
@@ -12,15 +13,16 @@ Based on the display of the [Freebox Revolution](http://www.free.fr/adsl/freebox
 
 ### Download version 2.0.1
 
-* [Revolution.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution.pbw)
-* [Revolution-VibeOnHour.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-VibeOnHour.pbw) (vibrates on the hour)
+* [RevolutionBT.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution.pbw)
+* [RevolutionBT-VibeOnHour.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-VibeOnHour.pbw) (vibrates on the hour)
 
 #### American (date formatted as MM-DD)
-* [Revolution-American.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American.pbw)
-* [Revolution-American-VibeOnHour.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American-VibeOnHour.pbw) (vibrates on the hour)
+* [RevolutionBT-American.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American.pbw)
+* [RevolutionBT-American-VibeOnHour.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American-VibeOnHour.pbw) (vibrates on the hour)
 
 ## License
-Copyright (c) 2013 [Douwe Maan](http://www.douwemaan.com/)
+Original code Copyright (c) 2013 [Douwe Maan](http://www.douwemaan.com/)
+BlueTooth additions Copyright (c) 2014 [Cliff McCollum]
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
