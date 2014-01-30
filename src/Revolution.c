@@ -1,5 +1,6 @@
-// Copyright (c) 2013 Douwe Maan <http://www.douwemaan.com/>
-// The above copyright notice shall be included in all copies or substantial portions of the program.
+// Original Revolution Watchface Copyright (c) 2013 Douwe Maan <http://www.douwemaan.com/>
+// BlueTooth modification, Copyright (c) 2014 Cliff McCollum
+// The above copyright notices shall be included in all copies or substantial portions of the program.
 
 // Envisioned as a watchface by Jean-Noël Mattern
 // Based on the display of the Freebox Revolution, which was designed by Philippe Starck.
@@ -113,6 +114,9 @@ static Slot date_slots[NUMBER_OF_DATE_SLOTS];
 static Layer *seconds_layer;
 static Slot second_slots[NUMBER_OF_SECOND_SLOTS];
 
+// Bluetooth vibration
+static bool vibrationIsOn;
+static const uint32_t const BT_vibe_segments[] = { 500, 100, 400, 100, 300, 100, 200, 100, 100};
 
 // General
 void destroy_property_animation(PropertyAnimation **prop_animation);
@@ -146,6 +150,7 @@ void update_second_slot(Slot *second_slot, int digit_value);
 int main(void);
 void init();
 void handle_second_tick(struct tm *tick_time, TimeUnits units_changed);
+void bluetooth_connection_handler(bool connected);
 void deinit();
 
 
@@ -529,6 +534,10 @@ void init() {
   display_seconds(tick_time);
 
   tick_timer_service_subscribe(SECOND_UNIT, handle_second_tick);
+
+  // Bluetooth handler
+  bluetooth_connection_service_subscribe(bluetooth_connection_handler);
+  vibrationIsOn = false;
 }
 
 void handle_second_tick(struct tm *tick_time, TimeUnits units_changed) {
@@ -548,6 +557,21 @@ void handle_second_tick(struct tm *tick_time, TimeUnits units_changed) {
     display_day(tick_time);
     display_date(tick_time);
   }
+
+  if (vibrationIsOn) {
+    if (tick_time->tm_sec % 15 == 0) {
+    VibePattern pat = {
+        .durations = BT_vibe_segments,
+        .num_segments = ARRAY_LENGTH(BT_vibe_segments),
+      };
+      vibes_enqueue_custom_pattern(pat);
+    }
+  }
+}
+
+void bluetooth_connection_handler(bool connected) {
+  vibes_double_pulse();
+  vibrationIsOn = !connected;
 }
 
 void deinit() {

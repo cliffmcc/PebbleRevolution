@@ -1,9 +1,9 @@
 {
-  "uuid":         "a1230861-d4eb-4f6e-a2d0-eaa2a07797dd",
-  "shortName":    "Revolution",
-  "longName":     "Revolution",
-  "companyName":  "Douwe Maan",
-  "versionCode":  201,
+  "uuid":         "2b47b347-d256-43ac-b56a-289f6e4128e1",
+  "shortName":    "RevolutionBT",
+  "longName":     "RevolutionBT",
+  "companyName":  "Cliff McCollum",
+  "versionCode":  21,
   "versionLabel": "2.0.1",
   "watchapp": {
     "watchface": true
