@@ -10,7 +10,7 @@
 
 // Settings
 #define USE_AMERICAN_DATE_FORMAT      false
-#define VIBE_ON_HOUR                  false
+#define VIBE_ON_HOUR                  true
 #define TIME_SLOT_ANIMATION_DURATION  500
 
 // Magic numbers

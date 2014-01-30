@@ -12,6 +12,13 @@ Envisioned as a watchface by Jean-Noël Mattern (Jnm), who posted it in the ["Wa
 
 Based on the display of the [Freebox Revolution](http://www.free.fr/adsl/freebox-revolution.html), which was designed by Philippe Starck.
 
+This version of the Revolution watchface vibrates whenever your Bluetooth signal is lost. No longer worry about leaving your phone somewhere by accident - your Pebble will vibrate every 15-seconds if it loses connection with your phone. As soon as the Bluetooth connection returns, the vibrating will stop.
+
+####How It Works
+* Everytime the BlueTooth signal is lost or restored, your Pebble will make two quick vibrations, letting you know something has happened.
+* If the signal has been lost, your Pebble will vibration rapidly every 15 seconds until the signal is restored.
+* If you want to silence the vibrations on purpose (for example, while you are locating your phone or if you disable Bluetooth on an airplane) switch to a different Watchface.
+
 ### Download version 2.0.1
 
 * [RevolutionBT.pbw](https://github.com/cliffmcc/PebbleRevolution/blob/master/releases/RevolutionBT.pbw)
